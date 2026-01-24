@@ -10,8 +10,8 @@ export default function Signin() {
   const navigate = useNavigate();
 
   // Valid credentials
-  const VALID_EMAIL = "esiappeagyei12@gmail.com";
-  const VALID_PASSWORD = "freshgirl12";
+  const VALID_EMAIL = "Robertbruce1911@gmail.com";
+  const VALID_PASSWORD = "Robert19";
 
   // Email validation helper
   const isValidEmail = (email: string) => {

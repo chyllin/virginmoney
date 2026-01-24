@@ -8,17 +8,17 @@ export default function Profile() {
       <div className="profile-card">
         <div className="profile-row">
           <span className="label">Full Name</span>
-          <span className="value">John Doe</span>
+          <span className="value">Robert Bruce</span>
         </div>
 
         <div className="profile-row">
           <span className="label">Email</span>
-          <span className="value">johndoe@email.com</span>
+          <span className="value">Robertbruce1911@gmail.com</span>
         </div>
 
         <div className="profile-row">
           <span className="label">Phone Number</span>
-          <span className="value">+233 24 123 4567</span>
+          <span className="value">**********</span>
         </div>
 
         <div className="profile-row">
