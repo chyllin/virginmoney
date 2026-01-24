@@ -1,0 +1,33 @@
+/* ===============================
+   DASHBOARD FOOTER
+================================ */
+.dashboard-footer {
+  width: 100%;
+  padding: 14px 1rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(
+    135deg,
+    #e60028 0%,
+    #c70025 50%,
+    #a80020 100%
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.4px;
+
+  /* stick to bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-footer {
+    font-size: 12px;
+    padding: 12px 0.5rem;
+  }
+}

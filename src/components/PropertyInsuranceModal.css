@@ -1,0 +1,109 @@
+.insurance-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.insurance-modal {
+  background: #fff;
+  width: 700px;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.plan-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+
+.plan-card.premium {
+  border-color: #2c5364;
+  background: #f6fbff;
+}
+
+.plan-card h4 {
+  margin-bottom: 0.3rem;
+}
+
+.coverage {
+  margin-bottom: 0.7rem;
+}
+
+.plan-card ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.pricing p {
+  margin: 0.3rem 0;
+}
+
+.pricing span {
+  color: green;
+  font-size: 12px;
+}
+
+.select-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background: #2c5364;
+  color: white;
+  cursor: pointer;
+}
+/* ACCOUNT HOLD BANNER */
+.account-hold-banner {
+  background: rgba(230, 0, 40, 0.08);
+  border: 1px solid rgba(230, 0, 40, 0.3);
+  color: #a80020;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* LOCKED BUTTON STATE */
+.select-btn.locked {
+  background: #cccccc;
+  color: #555555;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.select-btn.locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+

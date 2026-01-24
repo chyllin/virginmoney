@@ -1,0 +1,134 @@
+.savings-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ACCOUNT FROZEN BANNER */
+.account-frozen-banner {
+  background: #fff3f3;
+  border-left: 6px solid #e60028;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #8a001a;
+  font-weight: 700;
+}
+
+/* OVERVIEW */
+.savings-overview {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(230, 0, 40, 0.1);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e60028;
+}
+
+/* ACTION BUTTONS */
+.savings-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.savings-actions button {
+  padding: 0.9rem 1.3rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+}
+
+.goal {
+  background: linear-gradient(135deg, #e60028, #c70025);
+}
+
+.withdraw {
+  background: linear-gradient(135deg, #a80020, #8a001a);
+}
+
+/* 🔒 ACCOUNT LOCKED */
+.savings-actions.account-locked {
+  pointer-events: none;
+}
+
+/* 🚫 DISABLED STATE */
+.savings-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+  box-shadow: none;
+}
+
+/* 🚫 LABEL */
+.savings-actions button:disabled::after {
+  content: " 🚫 ON HOLD";
+  font-size: 11px;
+  font-weight: 700;
+  color: #8a001a;
+}
+
+/* GOALS */
+.savings-goals,
+.interest-growth {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(230, 0, 40, 0.1);
+}
+
+.goal-card {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  background: #fff5f7;
+  border-radius: 10px;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(135deg, #e60028, #c70025);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .savings-actions {
+    flex-direction: column;
+  }
+}

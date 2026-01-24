@@ -1,0 +1,333 @@
+/* Enhanced Recent Transactions Card */
+.recent-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 
+    0 4px 18px rgba(230, 0, 40, 0.1),
+    0 0 0 1px rgba(230, 0, 40, 0.05);
+  border: 1px solid rgba(230, 0, 40, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient overlay on hover */
+.recent-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(230, 0, 40, 0.03),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.recent-card:hover::before {
+  left: 100%;
+}
+
+.recent-card:hover {
+  box-shadow: 
+    0 8px 32px rgba(230, 0, 40, 0.18),
+    0 0 0 1px rgba(230, 0, 40, 0.15);
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(230, 0, 40, 0.2);
+}
+
+/* Animated header with pulse effect */
+.recent-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #e60028;
+  letter-spacing: 0.3px;
+  border-bottom: 2px solid #e60028;
+  padding-bottom: 0.8rem;
+  position: relative;
+  animation: fadeInDown 0.6s ease;
+}
+
+/* Animated underline */
+.recent-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e60028, #ff4d6d);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recent-card:hover h3::after {
+  width: 100%;
+}
+
+.recent-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Enhanced transaction items with staggered animation */
+.recent-card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem -1rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  opacity: 0;
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+/* Staggered animation delay */
+.recent-card li:nth-child(1) { animation-delay: 0.1s; }
+.recent-card li:nth-child(2) { animation-delay: 0.2s; }
+.recent-card li:nth-child(3) { animation-delay: 0.3s; }
+.recent-card li:nth-child(4) { animation-delay: 0.4s; }
+.recent-card li:nth-child(5) { animation-delay: 0.5s; }
+
+/* Hover effect with side accent */
+.recent-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(135deg, #e60028, #ff4d6d);
+  transition: width 0.3s ease;
+  border-radius: 4px 0 0 4px;
+}
+
+.recent-card li:hover::before {
+  width: 4px;
+}
+
+.recent-card li:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(230, 0, 40, 0.05),
+    rgba(230, 0, 40, 0.02),
+    transparent
+  );
+  padding-left: 1.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-radius: 8px;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(230, 0, 40, 0.08);
+}
+
+.recent-card li:last-child {
+  border-bottom: none;
+}
+
+/* Transaction title with icon */
+.recent-card .title {
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.recent-card li:hover .title {
+  color: #e60028;
+  font-weight: 600;
+}
+
+/* Animated amount with counter effect */
+.recent-card .amount {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.recent-card li:hover .amount {
+  transform: scale(1.08);
+  letter-spacing: 0.5px;
+}
+
+/* Credit amounts with pulse */
+.amount.credit {
+  color: #2e7d32;
+  text-shadow: 0 0 8px rgba(46, 125, 50, 0);
+  transition: all 0.3s ease;
+}
+
+.amount.credit:hover {
+  text-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* Debit amounts with pulse */
+.amount.debit {
+  color: #e60028;
+  text-shadow: 0 0 8px rgba(230, 0, 40, 0);
+  transition: all 0.3s ease;
+}
+
+.amount.debit:hover {
+  text-shadow: 0 0 8px rgba(230, 0, 40, 0.3);
+}
+
+/* Enhanced View All button with ripple effect */
+.view-all {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, transparent, transparent);
+  border: 2px solid #e60028;
+  color: #e60028;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple effect */
+.view-all::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(230, 0, 40, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.view-all:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.view-all:hover {
+  background: linear-gradient(135deg, #e60028, #c70025);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 6px 20px rgba(230, 0, 40, 0.35),
+    0 0 0 4px rgba(230, 0, 40, 0.1);
+  border-color: transparent;
+}
+
+.view-all:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(230, 0, 40, 0.3);
+}
+
+/* Loading skeleton animation for empty states */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.recent-card.loading li {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .recent-card {
+    padding: 1.5rem;
+  }
+  
+  .recent-card li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .view-all {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Add number counter animation */
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.amount {
+  counter-reset: num var(--num);
+  animation: counter 0.5s ease-in-out;
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+}

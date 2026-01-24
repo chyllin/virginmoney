@@ -1,0 +1,427 @@
+/* ===============================
+   LEGAL PAGE CONTAINER
+================================ */
+.legal-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  animation: fadeIn 0.6s ease;
+  position: relative;
+}
+
+/* Background pattern */
+.legal-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, #fff5f7 0%, #ffffff 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(230, 0, 40, 0.02) 35px,
+      rgba(230, 0, 40, 0.02) 70px
+    );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===============================
+   MAIN HEADING
+================================ */
+.legal-page > h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #e60028;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  animation: slideInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animated underline */
+.legal-page > h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e60028, #ff4d6d, #e60028);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+  border-radius: 2px;
+}
+
+/* Decorative dots */
+.legal-page > h2::before {
+  content: '●●●';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e60028;
+  font-size: 8px;
+  letter-spacing: 4px;
+  opacity: 0;
+  animation: dotFadeIn 1s ease 0.3s forwards;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+.legal-page section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 4px 20px rgba(230, 0, 40, 0.08),
+    0 0 0 1px rgba(230, 0, 40, 0.05);
+  border-left: 4px solid #e60028;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 0.8s ease backwards;
+}
+
+.legal-page section:nth-child(2) { animation-delay: 0.1s; }
+.legal-page section:nth-child(3) { animation-delay: 0.2s; }
+.legal-page section:nth-child(4) { animation-delay: 0.3s; }
+
+/* Hover gradient sweep */
+.legal-page section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(230, 0, 40, 0.03),
+    transparent
+  );
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.legal-page section:hover::before {
+  left: 100%;
+}
+
+.legal-page section:hover {
+  box-shadow: 
+    0 8px 32px rgba(230, 0, 40, 0.15),
+    0 0 0 1px rgba(230, 0, 40, 0.1);
+  transform: translateY(-4px);
+  border-left-width: 6px;
+}
+
+/* ===============================
+   SECTION HEADINGS (h3)
+================================ */
+.legal-page h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #e60028;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(230, 0, 40, 0.15);
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+/* Animated accent bar */
+.legal-page h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e60028;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.legal-page section:hover h3::after {
+  width: 120px;
+}
+
+/* Number badge */
+.legal-page h3::before {
+  content: '§';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #e60028, #c70025);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 18px;
+  margin-right: 12px;
+  box-shadow: 0 4px 12px rgba(230, 0, 40, 0.3);
+  animation: pulse 2s ease infinite;
+}
+
+/* ===============================
+   SUBSECTION HEADINGS (h4)
+================================ */
+.legal-page h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  margin: 1.8rem 0 1rem 0;
+  position: relative;
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Number indicator */
+.legal-page h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #e60028;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(230, 0, 40, 0.15);
+  transition: all 0.3s ease;
+}
+
+.legal-page h4:hover {
+  color: #e60028;
+  padding-left: 28px;
+}
+
+.legal-page h4:hover::before {
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 0 5px rgba(230, 0, 40, 0.2);
+}
+
+/* ===============================
+   PARAGRAPHS
+================================ */
+.legal-page p {
+  color: #555555;
+  line-height: 1.8;
+  margin: 1rem 0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.legal-page p:hover {
+  color: #333333;
+  padding-left: 8px;
+}
+
+.legal-page p strong {
+  color: #e60028;
+  font-weight: 700;
+  padding: 2px 4px;
+  background: rgba(230, 0, 40, 0.05);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.legal-page p strong:hover {
+  background: rgba(230, 0, 40, 0.1);
+  padding: 2px 8px;
+}
+
+/* ===============================
+   LISTS
+================================ */
+.legal-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.legal-page li {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 40px;
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Custom bullet */
+.legal-page li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #e60028, #c70025);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(230, 0, 40, 0.2);
+  transition: all 0.3s ease;
+}
+
+.legal-page li:hover {
+  background: rgba(230, 0, 40, 0.03);
+  padding-left: 48px;
+  color: #333333;
+}
+
+.legal-page li:hover::before {
+  transform: translateY(-50%) rotate(360deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(230, 0, 40, 0.4);
+}
+
+/* ===============================
+   REGULATORY INFO SPECIAL STYLING
+================================ */
+.legal-page section:last-child {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+  border: 2px solid rgba(230, 0, 40, 0.15);
+  border-left: 6px solid #e60028;
+}
+
+.legal-page section:last-child p {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(230, 0, 40, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(230, 0, 40, 0.5);
+  }
+}
+
+@keyframes dotFadeIn {
+  from {
+    opacity: 0;
+    left: -50px;
+  }
+  to {
+    opacity: 1;
+    left: -40px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 1.5rem;
+  }
+
+  .legal-page > h2 {
+    font-size: 28px;
+  }
+
+  .legal-page > h2::before {
+    display: none;
+  }
+
+  .legal-page section {
+    padding: 1.5rem;
+  }
+
+  .legal-page h3 {
+    font-size: 22px;
+  }
+
+  .legal-page h4 {
+    font-size: 16px;
+  }
+
+  .legal-page li {
+    padding-left: 35px;
+  }
+
+  .legal-page li::before {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+/* ===============================
+   PRINT STYLES
+================================ */
+@media print {
+  .legal-page section {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+  }
+
+  .legal-page section:hover {
+    transform: none;
+  }
+}

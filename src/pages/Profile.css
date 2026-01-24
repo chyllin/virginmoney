@@ -1,0 +1,62 @@
+.profile-page {
+  padding: 2rem;
+}
+
+.profile-page h2 {
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+  color: #203a43;
+}
+
+/* Profile Card */
+.profile-card {
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Rows */
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Account Type Badge */
+.badge {
+  background: rgba(45, 123, 168, 0.1);
+  color: #2d7ba8;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Verification */
+.status {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.verified {
+  color: #16a34a;
+}

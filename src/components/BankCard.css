@@ -1,0 +1,192 @@
+.bank-card {
+  width: 100%;
+  max-width: 420px;
+  height: 240px;
+  background: linear-gradient(135deg, #e60028 0%, #c70025 50%, #a80020 100%);
+  border-radius: 20px;
+  padding: 1.6rem;
+  padding-bottom: 3.5rem; /* 🔑 space for VISA */
+  color: #ffffff;
+  box-shadow:
+    0 18px 40px rgba(230, 0, 40, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative stripes */
+.bank-card::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 10%;
+  width: 150px;
+  height: 180%;
+  background: rgba(168, 0, 32, 0.4);
+  transform: skewX(-15deg);
+}
+
+.v-pattern-1 {
+  position: absolute;
+  top: -10%;
+  left: 25%;
+  width: 100px;
+  height: 140%;
+  background: rgba(199, 0, 37, 0.5);
+  transform: skewX(-15deg);
+}
+
+.v-pattern-2 {
+  position: absolute;
+  top: -10%;
+  left: 35%;
+  width: 120px;
+  height: 140%;
+  background: rgba(230, 0, 40, 0.3);
+  transform: skewX(-15deg);
+}
+
+/* Noise */
+.bank-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+/* Shine */
+.card-shine {
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  z-index: 3;
+}
+
+/* TOP */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.bank-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.virgin-circle {
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.virgin-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e60028;
+  font-style: italic;
+}
+
+.bank-name {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: lowercase;
+  margin-top: 4px;
+}
+
+/* CHIP */
+.chip {
+  width: 46px;
+  height: 36px;
+  border-radius: 6px;
+  background: linear-gradient(
+    135deg,
+    #f7d046,
+    #e6b800,
+    #fbe36a,
+    #cfa400
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset 0 -3px 4px rgba(0, 0, 0, 0.25),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CARD NUMBER */
+.card-number {
+  margin-top: 2.4rem; /* 🔑 reduced */
+  font-size: 22px;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 10;
+}
+
+/* CARD HOLDER */
+.card-meta {
+  margin-top: 1.2rem; /* 🔑 reduced */
+  position: relative;
+  z-index: 15; /* 🔑 above VISA */
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 8px;
+  letter-spacing: 1px;
+  opacity: 0.75;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* VISA */
+.card-bottom {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.6rem;
+  text-align: right;
+  z-index: 10;
+}
+
+.visa-logo {
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.visa-type {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .bank-card {
+    height: 220px;
+  }
+}

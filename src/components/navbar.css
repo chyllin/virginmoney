@@ -1,0 +1,130 @@
+/* ===============================
+   NAVBAR CONTAINER
+================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(135deg, #e60028 0%, #c70025 50%, #a80020 100%);
+  border-bottom: 2px solid #c70025;
+  box-shadow: 0 4px 12px rgba(230, 0, 40, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+/* ===============================
+   LEFT SECTION
+================================ */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+/* Menu button */
+.menu-btn {
+  background: #ffffff;
+  color: #e60028;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   BANK TEXT LOGO (NOT CLICKABLE)
+================================ */
+.bank-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  user-select: none;      /* not interactive */
+}
+
+/* Circle */
+.virgin-circle {
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+/* Virgin text */
+.virgin-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e60028;
+  font-style: italic;
+  letter-spacing: -0.3px;
+}
+
+/* Bank name */
+.bank-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: lowercase;
+  color: #ffffff;
+  margin-left: 6px;
+}
+
+/* ===============================
+   RIGHT ACTIONS
+================================ */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  background: #ffffff;
+  color: #e60028;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .virgin-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .bank-name {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}

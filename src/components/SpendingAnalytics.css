@@ -1,0 +1,225 @@
+.analytics-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Header with update timestamp */
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.analytics-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #0d1b2a;
+}
+
+.update-date {
+  font-size: 12px;
+  color: #666;
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ===============================
+   SUMMARY GRID - Now 3 columns
+================================ */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-item {
+  padding: 1.4rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.analytics-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 0 100%;
+  transition: all 0.3s ease;
+}
+
+.analytics-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-item:hover::before {
+  width: 60px;
+  height: 60px;
+}
+
+.analytics-item.income {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 125, 50, 0.12),
+    rgba(46, 125, 50, 0.05)
+  );
+  border-left: 4px solid #2e7d32;
+}
+
+.analytics-item.expense {
+  background: linear-gradient(
+    135deg,
+    rgba(198, 40, 40, 0.12),
+    rgba(198, 40, 40, 0.05)
+  );
+  border-left: 4px solid #c62828;
+}
+
+.analytics-item.savings {
+  background: linear-gradient(
+    135deg,
+    rgba(21, 101, 192, 0.12),
+    rgba(21, 101, 192, 0.05)
+  );
+  border-left: 4px solid #1565c0;
+}
+
+.analytics-item .label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.analytics-item .value {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0d1b2a;
+}
+
+/* ===============================
+   CATEGORY BREAKDOWN
+================================ */
+.category-breakdown {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.category-breakdown h4 {
+  font-size: 16px;
+  margin: 0 0 1.25rem;
+  color: #0d1b2a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-breakdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  background: #ffffff;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.category-breakdown li:hover {
+  background: #f0f7ff;
+  border-color: #1565c0;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.1);
+}
+
+.category-breakdown li:last-child {
+  margin-bottom: 0;
+}
+
+.category-name {
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-name::before {
+  content: '●';
+  color: #1565c0;
+  font-size: 10px;
+}
+
+.category-breakdown strong {
+  font-weight: 700;
+  color: #0d1b2a;
+  font-size: 15px;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 2rem 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .analytics-card {
+    padding: 1.5rem;
+  }
+  
+  .analytics-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .update-date {
+    font-size: 11px;
+  }
+}
