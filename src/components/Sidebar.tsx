@@ -23,10 +23,10 @@ export default function Sidebar({ open, onSelect }: Props) {
           className={`profile ${activeItem === "profile" ? "active" : ""}`}
           onClick={() => handleClick("profile")}
         >
-          <div className="avatar">JD</div>
+          <div className="avatar">JB</div>
           {open && (
             <>
-              <h3>John Doe</h3>
+              <h3>Robert Bruce</h3>
               <p>Premium Customer</p>
             </>
           )}

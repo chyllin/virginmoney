@@ -4,22 +4,19 @@
   gap: 2rem;
 }
 
-/* ACCOUNT FROZEN BANNER */
-.account-frozen-banner {
-  background: #fff3f3;
-  border-left: 6px solid #e60028;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  color: #8a001a;
-  font-weight: 700;
-}
-
 /* OVERVIEW */
 .savings-overview {
   background: #fff;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 18px rgba(230, 0, 40, 0.1);
+}
+
+.savings-overview h2 {
+  color: #e60028;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .overview-grid {
@@ -40,12 +37,14 @@
   font-size: 22px;
   font-weight: 700;
   color: #e60028;
+  margin-top: 0.5rem;
 }
 
 /* ACTION BUTTONS */
 .savings-actions {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .savings-actions button {
@@ -56,39 +55,72 @@
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.add {
+.savings-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.savings-actions button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.savings-actions button.add {
   background: linear-gradient(135deg, #2e7d32, #43a047);
 }
 
-.goal {
+.savings-actions button.goal {
   background: linear-gradient(135deg, #e60028, #c70025);
 }
 
-.withdraw {
+.savings-actions button.withdraw {
   background: linear-gradient(135deg, #a80020, #8a001a);
 }
 
-/* 🔒 ACCOUNT LOCKED */
-.savings-actions.account-locked {
-  pointer-events: none;
-}
-
-/* 🚫 DISABLED STATE */
+/* 🔒 DISABLED STATE */
 .savings-actions button:disabled {
-  opacity: 0.45;
+  opacity: 0.5;
   cursor: not-allowed;
-  filter: grayscale(100%);
-  box-shadow: none;
+  filter: grayscale(0.7);
+  position: relative;
 }
 
-/* 🚫 LABEL */
+.savings-actions button:disabled:hover {
+  transform: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 🚫 ON HOLD BADGE */
 .savings-actions button:disabled::after {
-  content: " 🚫 ON HOLD";
-  font-size: 11px;
+  content: "🚫 ON HOLD";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: #ffffff;
+  font-size: 9px;
   font-weight: 700;
-  color: #8a001a;
+  padding: 3px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+  animation: pulse 2s ease infinite;
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
+  }
 }
 
 /* GOALS */
@@ -100,35 +132,58 @@
   box-shadow: 0 4px 18px rgba(230, 0, 40, 0.1);
 }
 
+.savings-goals h3,
+.interest-growth h3 {
+  color: #e60028;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 .goal-card {
   margin-top: 1rem;
   padding: 1.2rem;
   background: #fff5f7;
   border-radius: 10px;
+  border: 1px solid rgba(230, 0, 40, 0.1);
 }
 
 .goal-header {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
 }
 
 .progress-bar {
   height: 8px;
   background: #eee;
   border-radius: 5px;
-  margin-top: 0.5rem;
   overflow: hidden;
 }
 
 .progress {
   height: 100%;
   background: linear-gradient(135deg, #e60028, #c70025);
+  transition: width 0.3s ease;
+}
+
+/* INTEREST GROWTH */
+.growth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .savings-actions {
     flex-direction: column;
+  }
+
+  .savings-actions button {
+    width: 100%;
   }
 }

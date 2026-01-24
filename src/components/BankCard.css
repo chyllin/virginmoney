@@ -140,7 +140,7 @@
 
 /* CARD HOLDER */
 .card-meta {
-  margin-top: 1.2rem; /* 🔑 reduced */
+  margin-top: 1.0rem; /* 🔑 reduced */
   position: relative;
   z-index: 15; /* 🔑 above VISA */
 }
@@ -187,6 +187,6 @@
 /* RESPONSIVE */
 @media (max-width: 480px) {
   .bank-card {
-    height: 220px;
+    height: 230px;
   }
 }

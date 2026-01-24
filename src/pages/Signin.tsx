@@ -10,7 +10,7 @@ export default function Signin() {
   const navigate = useNavigate();
 
   // Valid credentials
-  const VALID_EMAIL = "Robertbruce1911@gmail.com";
+  const VALID_EMAIL = "Robertbruce1911@outlook.com";
   const VALID_PASSWORD = "Robert19";
 
   // Email validation helper
@@ -66,6 +66,10 @@ export default function Signin() {
           placeholder="Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
         />
 
         <input
@@ -73,6 +77,7 @@ export default function Signin() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoComplete="new-password"
         />
 
         <button onClick={signin}>Sign In</button>

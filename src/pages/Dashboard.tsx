@@ -59,7 +59,7 @@ export default function Dashboard() {
           {activeView === "profile" && <Profile />}
           {activeView === "insurance" && <Insurance />}
           {activeView === "transaction-history" && <TransactionHistory />}
-          {activeView === "savings" && <SavingsAccount accountFrozen={false} />}
+          {activeView === "savings" && <SavingsAccount accountFrozen={accountFrozen} />}
           {activeView === "legal" && <Legal />}
           {activeView === "pending" && (
   <PendingTransactions accountFrozen={accountFrozen} />
@@ -104,7 +104,7 @@ export default function Dashboard() {
 
                   <div className="stat-card">
                     <h3>Pending Transactions</h3>
-                    <p className="amount">3</p>
+                    <p className="amount">13</p>
                   </div>
                 </div>
               </div>

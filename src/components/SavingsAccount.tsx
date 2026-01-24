@@ -18,8 +18,7 @@ export default function SavingsAccount({ accountFrozen }: Props) {
       {/* 🔴 ACCOUNT ON HOLD NOTICE */}
       {accountFrozen && (
         <div className="account-frozen-banner">
-          ⚠️ <strong>NOTICE:</strong> Your savings account is currently{" "}
-          <strong>ON HOLD</strong>. All transactions are temporarily disabled.
+          
         </div>
       )}
 
@@ -77,7 +76,7 @@ export default function SavingsAccount({ accountFrozen }: Props) {
               <div className="goal-header">
                 <span>{goal.name}</span>
                 <span>
-                  ${goal.saved.toLocaleString()} / $
+                  €{goal.saved.toLocaleString()} / €
                   {goal.target.toLocaleString()}
                 </span>
               </div>

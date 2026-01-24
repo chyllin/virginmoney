@@ -13,7 +13,7 @@ export default function Profile() {
 
         <div className="profile-row">
           <span className="label">Email</span>
-          <span className="value">Robertbruce1911@gmail.com</span>
+          <span className="value">Robertbruce1911@outlook.com</span>
         </div>
 
         <div className="profile-row">

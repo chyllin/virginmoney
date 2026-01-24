@@ -31,7 +31,7 @@ export default function BankCard() {
       <div className="card-meta">
         <div className="meta-item">
           <div className="label">CARD HOLDER</div>
-          <div className="value">JOHN DOE</div>
+          <div className="value">Robert Bruce</div>
         </div>
       </div>
 

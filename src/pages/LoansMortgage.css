@@ -567,3 +567,60 @@
   border-radius: 8px;
   border: 1px dashed rgba(230, 0, 40, 0.3);
 }
+/* ===============================
+   DISABLED BUTTON STATE WITH ON HOLD BADGE
+================================ */
+
+/* Disabled button styling */
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  position: relative;
+  filter: grayscale(0.3);
+}
+
+/* ON HOLD badge */
+.action-btn:disabled::after {
+  content: '🚫 ON HOLD';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+  animation: pulse 2s ease infinite;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
+  }
+}
+
+/* Remove shimmer from disabled buttons */
+.action-btn:disabled::before {
+  display: none !important;
+}
+
+/* Prevent hover effects on disabled buttons */
+.action-btn:disabled:hover {
+  transform: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.action-btn:disabled:hover::after {
+  left: auto !important;
+}

@@ -57,11 +57,11 @@ export default function LoansMortgage({ accountFrozen }: Props) {
           <h3>Estate & Inheritance Notice</h3>
 
           <p>
-            The original account holder (Robert Bruce) has been{" "}
-            <strong>confirmed deceased</strong>. This loan account is currently
-            undergoing <strong>estate administration</strong> and formal legal
-            review.
-          </p>
+  The original account holder (<strong>Robert Bruce</strong>) has been{" "}
+  <strong>confirmed deceased</strong>. This loan account is currently
+  undergoing <strong>estate administration</strong> and formal legal
+  review.
+</p>
 
           <p>
             <strong>Next of Kin / Inheritor:</strong>{" "}

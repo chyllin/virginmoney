@@ -18,8 +18,7 @@ export default function HealthInsuranceModal({ onClose }: Props) {
         {/* ACCOUNT HOLD NOTICE */}
         {accountOnHold && (
           <div className="account-hold-banner">
-            🔒 <strong>ACCOUNT ON HOLD</strong> — Insurance enrollment is
-            temporarily unavailable until restrictions are cleared.
+           
           </div>
         )}
 
