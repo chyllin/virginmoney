@@ -268,3 +268,54 @@ body.light .sidebar::-webkit-scrollbar-thumb {
 body.light .sidebar::-webkit-scrollbar-thumb:hover {
   background: rgba(230, 0, 40, 0.5);
 }
+/* ===============================
+   MOBILE FIX (PHONES & SMALL TABLETS)
+================================ */
+@media (max-width: 768px) {
+  .sidebar {
+    top: 60px;
+    left: -280px;              /* hide sidebar by default */
+    width: 280px !important;   /* force full width */
+    height: calc(100vh - 60px);
+    padding: 1.25rem 1rem;
+    transition: left 0.3s ease;
+    box-shadow: 6px 0 20px rgba(0, 0, 0, 0.35);
+  }
+
+  /* When OPEN on mobile → slide in */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Disable desktop "collapsed" mode on mobile */
+  .sidebar.closed {
+    width: 280px;
+  }
+
+  /* Always show text on mobile */
+  .sidebar.closed .menu li .text,
+  .sidebar .menu li .text {
+    opacity: 1;
+    width: auto;
+  }
+
+  /* Sidebar items full-width & readable */
+  .menu li {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  /* Hide profile collapse effects */
+  .sidebar.closed .menu-title {
+    opacity: 1;
+    height: auto;
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  /* Toggle button becomes hamburger-style */
+  .toggle-btn {
+    justify-content: flex-start;
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+}
