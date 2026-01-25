@@ -2,7 +2,7 @@ type Props = {
   accountFrozen: boolean;
 };
 
-import "./pendingTransactions.css";
+import "./PendingTransactions.css";
 
 export default function PendingTransactions({ accountFrozen }: Props) {
   return (
