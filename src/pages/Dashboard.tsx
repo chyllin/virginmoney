@@ -12,7 +12,7 @@ import Security from "../pages/Security";
 import Footer from "../components/Footer";
 import Legal from "../pages/Legal";
 import LoansMortgage from "../pages/LoansMortgage";
-import "./dashboard.css";
+import "./Dashboard.css";
 
 import PendingTransactions from "../pages/PendingTransactions";
 
