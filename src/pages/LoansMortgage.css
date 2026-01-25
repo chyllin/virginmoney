@@ -624,3 +624,108 @@
 .action-btn:disabled:hover::after {
   left: auto !important;
 }
+/* ===============================
+   MOBILE PERFORMANCE FIX – LOANS
+================================ */
+@media (max-width: 768px) {
+
+  /* Kill heavy fixed background */
+  .loans-wrapper::before {
+    position: absolute;
+    background: none;
+  }
+
+  /* Flatten cards & sections */
+  .loan-overview,
+  .loan-section {
+    animation: none;
+    transform: none !important;
+    border-radius: 12px;
+  }
+
+  .loan-overview::before,
+  .loan-section::before {
+    display: none;
+  }
+
+  /* Disable hover motion */
+  .loan-overview:hover,
+  .loan-section:hover,
+  .overview-grid > div:hover,
+  .loan-card > div:hover,
+  .schedule-grid > div:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Headings: simpler, tighter */
+  .loan-overview h2,
+  .loan-section h2 {
+    font-size: 20px;
+    animation: none;
+  }
+
+  .loan-overview h2::after,
+  .loan-section h2::after {
+    display: none;
+  }
+
+  /* Stop accent animations */
+  .loan-section h3::before {
+    transition: none;
+  }
+
+  /* Compact grids */
+  .overview-grid,
+  .loan-card,
+  .schedule-grid {
+    gap: 0.8rem;
+  }
+
+  /* Reduce text size slightly */
+  .value {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  /* Stop pulsing badges */
+  .status.active,
+  .status.hold,
+  .frozen-note,
+  .estate-notice {
+    animation: none;
+  }
+
+  /* Buttons: no hover/ripple on mobile */
+  .loan-actions button,
+  .support-actions button {
+    transition: none;
+  }
+
+  .loan-actions button::before,
+  .support-actions button::before {
+    display: none;
+  }
+
+  .loan-actions button:hover,
+  .support-actions button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Disabled badge cleanup */
+  .action-btn:disabled::after {
+    font-size: 8px;
+    padding: 2px 6px;
+    animation: none;
+  }
+
+  /* Legal note readability */
+  .legal-note {
+    font-size: 11px;
+    padding: 0.8rem;
+  }
+}

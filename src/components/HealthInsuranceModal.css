@@ -223,3 +223,25 @@
   transform: none;
   box-shadow: none;
 }
+@media (max-width: 768px) {
+  .insurance-modal-backdrop {
+    align-items: flex-end;
+  }
+
+  .insurance-modal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    padding: 1.25rem;
+    animation: slideUpModal 0.35s ease;
+  }
+}
+
+@keyframes slideUpModal {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

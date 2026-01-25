@@ -570,3 +570,21 @@
 .action-btn:disabled:hover::after {
   left: auto !important;
 }
+/* ===============================
+   MOBILE CONTENT FIX (CRITICAL)
+================================ */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .dashboard-main {
+    overflow-x: hidden;
+  }
+}
+/* Make space for fixed footer */
+.dashboard-main {
+  padding-bottom: 70px;
+}

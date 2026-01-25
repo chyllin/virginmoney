@@ -269,3 +269,82 @@
 .pending-card:nth-child(3) { animation-delay: 0.3s; }
 .pending-card:nth-child(4) { animation-delay: 0.4s; }
 .pending-card:nth-child(5) { animation-delay: 0.5s; }
+/* ===============================
+   MOBILE FIX – PENDING TRANSACTIONS
+================================ */
+@media (max-width: 768px) {
+
+  /* Simplify container */
+  .pending-wrapper {
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  /* Stop warning icon animation */
+  .pending-title::before {
+    animation: none;
+  }
+
+  /* Info box: cleaner */
+  .pending-info {
+    padding: 1rem;
+    font-size: 13px;
+  }
+
+  .pending-info::before {
+    display: none;
+  }
+
+  /* Cards: stable & readable */
+  .pending-card {
+    padding: 1.1rem;
+    animation: none;
+    transform: none !important;
+    box-shadow: none;
+  }
+
+  .pending-card::before {
+    display: none;
+  }
+
+  .pending-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #f0f0f0;
+  }
+
+  /* Text sizing */
+  .pending-card h3 {
+    font-size: 15px;
+  }
+
+  .pending-card .amount {
+    font-size: 18px;
+  }
+
+  .pending-note {
+    font-size: 12px;
+    padding: 0.6rem;
+  }
+
+  /* Status badges: no hover motion */
+  .status {
+    font-size: 11px;
+    padding: 5px 12px;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .status:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Footer cleanup */
+  .pending-footer {
+    font-size: 12px;
+    padding: 1rem;
+    box-shadow: none;
+  }
+}

@@ -116,3 +116,39 @@
     grid-template-columns: 1fr;
   }
 }
+/* ===============================
+   MOBILE UX REFINEMENT
+================================ */
+@media (max-width: 768px) {
+  .insurance-card {
+    padding: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(230, 0, 40, 0.1);
+    transform: none !important;
+  }
+
+  /* Disable hover animations on touch */
+  .insurance-card:hover {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(230, 0, 40, 0.1);
+  }
+
+  .insurance-card::before {
+    transform: scaleX(1); /* show accent always */
+  }
+
+  .insurance-card h3 {
+    font-size: 16px;
+  }
+
+  .insurance-card p {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+
+  .insurance-card button {
+    height: 46px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}

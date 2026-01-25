@@ -31,3 +31,18 @@
     padding: 12px 0.5rem;
   }
 }
+/* ===============================
+   MOBILE FOOTER FIX
+================================ */
+@media (max-width: 768px) {
+
+  .dashboard-footer {
+    font-size: 11px;
+    padding: 10px 0.75rem;
+    line-height: 1.4;
+  }
+
+  .dashboard-main {
+    padding-bottom: 80px; /* extra space on mobile */
+  }
+}

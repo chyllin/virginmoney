@@ -425,3 +425,64 @@
     transform: none;
   }
 }
+/* ===============================
+   MOBILE PERFORMANCE & UX FIX
+================================ */
+@media (max-width: 768px) {
+
+  /* Kill heavy background effects */
+  .legal-page::before {
+    position: absolute;
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+  }
+
+  /* Flatten sections */
+  .legal-page section {
+    border-radius: 12px;
+    transform: none !important;
+    animation: none;
+  }
+
+  .legal-page section::before {
+    display: none;
+  }
+
+  /* Reduce visual noise */
+  .legal-page h3::before {
+    animation: none;
+  }
+
+  .legal-page h3::after {
+    display: none;
+  }
+
+  /* Stop hover movement on text */
+  .legal-page p,
+  .legal-page li,
+  .legal-page h4 {
+    transition: none;
+  }
+
+  .legal-page p:hover,
+  .legal-page li:hover,
+  .legal-page h4:hover {
+    padding-left: initial;
+    color: inherit;
+  }
+
+  /* Compact legal text */
+  .legal-page p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .legal-page li {
+    font-size: 14px;
+    padding: 0.6rem 0 0.6rem 34px;
+  }
+
+  /* Make bullets lighter */
+  .legal-page li::before {
+    box-shadow: none;
+  }
+}

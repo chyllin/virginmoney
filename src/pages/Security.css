@@ -105,3 +105,56 @@
   font-weight: 600;
   margin-bottom: 1rem;
 }
+/* ===============================
+   MOBILE FIX – SECURITY PAGE
+================================ */
+@media (max-width: 768px) {
+
+  .security-page {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .security-page h2 {
+    font-size: 20px;
+    margin-bottom: 1.25rem;
+  }
+
+  .security-card {
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .security-card h3 {
+    font-size: 16px;
+  }
+
+  /* Inputs */
+  .form-group input {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Buttons – full width for thumbs */
+  .primary-btn,
+  .danger-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Meta text spacing */
+  .meta {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .strength {
+    font-size: 12px;
+  }
+
+  .warning-text {
+    font-size: 13px;
+  }
+}
