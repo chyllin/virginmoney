@@ -17,7 +17,7 @@ export default function PropertyInsuranceModal({ onClose }: Props) {
           {/* BASIC PLAN */}
           <div className="plan-card">
             <h4>Basic Property Cover</h4>
-            <p>Coverage: <strong>€200,000</strong></p>
+            <p>Coverage: <strong>£200,000</strong></p>
 
             <ul>
               <li>✔ Fire & natural disasters</li>
@@ -25,7 +25,7 @@ export default function PropertyInsuranceModal({ onClose }: Props) {
               <li>✔ Limited theft protection</li>
             </ul>
 
-            <p className="price">Yearly: <strong>€1,150</strong></p>
+            <p className="price">Yearly: <strong>£1,150</strong></p>
             <button className="select-btn locked" disabled>
               🔒 Proceed (Disabled)
             </button>
@@ -34,7 +34,7 @@ export default function PropertyInsuranceModal({ onClose }: Props) {
           {/* PREMIUM PLAN */}
           <div className="plan-card premium">
             <h4>Premium Property Cover</h4>
-            <p>Coverage: <strong>€55,000</strong></p>
+            <p>Coverage: <strong>£55,000</strong></p>
 
             <ul>
               <li>✔ Fire, flood & storm damage</li>
@@ -43,7 +43,7 @@ export default function PropertyInsuranceModal({ onClose }: Props) {
               <li>✔ Temporary housing</li>
             </ul>
 
-            <p className="price">Yearly: <strong>€1,450</strong></p>
+            <p className="price">Yearly: <strong>£1,450</strong></p>
             <button className="select-btn locked" disabled>
               🔒 Proceed (Disabled)
             </button>

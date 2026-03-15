@@ -17,7 +17,7 @@ export default function LifeInsuranceModal({ onClose }: Props) {
           {/* BASIC PLAN */}
           <div className="plan-card">
             <h4>Basic Life Cover</h4>
-            <p className="coverage">Coverage: <strong>€150,000</strong></p>
+            <p className="coverage">Coverage: <strong>£150,000</strong></p>
 
             <ul>
               <li>✔ Accidental death cover</li>
@@ -27,7 +27,7 @@ export default function LifeInsuranceModal({ onClose }: Props) {
 
             <div className="pricing">
 
-              <p>Yearly: <strong>€1020</strong> </p>
+              <p>Yearly: <strong>£1020</strong> </p>
             </div>
 
            <button className="select-btn locked" disabled>
@@ -38,7 +38,7 @@ export default function LifeInsuranceModal({ onClose }: Props) {
           {/* PREMIUM PLAN */}
           <div className="plan-card premium">
             <h4>Premium Life Cover</h4>
-            <p className="coverage">Coverage: <strong>€450,000</strong></p>
+            <p className="coverage">Coverage: <strong>£450,000</strong></p>
 
             <ul>
               <li>✔ Accidental & natural death</li>
@@ -48,7 +48,7 @@ export default function LifeInsuranceModal({ onClose }: Props) {
 
             <div className="pricing">
              
-              <p>Yearly: <strong>€2290</strong> </p>
+              <p>Yearly: <strong>£2290</strong> </p>
             </div>
 
             <button className="select-btn locked" disabled>

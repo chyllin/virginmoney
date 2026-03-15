@@ -17,7 +17,7 @@ export default function RecentActivity({ onViewAll }: Props) {
           <li key={tx.id}>
             <span className="title">{tx.name}</span>
             <span className={`amount ${tx.amount > 0 ? "credit" : "debit"}`}>
-              {tx.amount > 0 ? "+" : "-"}€
+              {tx.amount > 0 ? "+" : "-"}£
               {Math.abs(tx.amount).toFixed(2)}
             </span>
           </li>

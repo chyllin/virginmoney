@@ -27,7 +27,7 @@ export default function HealthInsuranceModal({ onClose }: Props) {
           <div className="plan-card">
             <h4>Basic Health Cover</h4>
             <p className="coverage">
-              Annual Coverage: <strong>€50,000</strong>
+              Annual Coverage: <strong>£50,000</strong>
             </p>
 
             <ul>
@@ -37,7 +37,7 @@ export default function HealthInsuranceModal({ onClose }: Props) {
             </ul>
 
             <div className="pricing">
-              <p>Yearly: <strong>€1,000</strong></p>
+              <p>Yearly: <strong>£1,000</strong></p>
             </div>
 
             <button className="select-btn locked" disabled>
@@ -49,7 +49,7 @@ export default function HealthInsuranceModal({ onClose }: Props) {
           <div className="plan-card premium">
             <h4>Premium Health Cover</h4>
             <p className="coverage">
-              Annual Coverage: <strong>€100,000</strong>
+              Annual Coverage: <strong>£100,000</strong>
             </p>
 
             <ul>
@@ -60,7 +60,7 @@ export default function HealthInsuranceModal({ onClose }: Props) {
             </ul>
 
             <div className="pricing">
-              <p>Yearly: <strong>€1,480</strong></p>
+              <p>Yearly: <strong>£1,480</strong></p>
             </div>
 
             <button className="select-btn locked" disabled>

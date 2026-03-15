@@ -48,7 +48,7 @@ export default function Dashboard() {
 
     <div className="warning-text">
       <strong>WARNING:</strong> The account is currently on hold due to
-      an outstanding mortgage balance of <strong>€55,000</strong>.
+      an outstanding mortgage balance of <strong>£55,000</strong>.
       Certain features are temporarily disabled until resolution.
     </div>
   </div>
@@ -95,12 +95,12 @@ export default function Dashboard() {
                 <div className="stats-grid">
                   <div className="stat-card">
                     <h3>Account Balance</h3>
-                    <p className="amount">€5,000,000.00</p>
+                    <p className="amount">£5,000,000.00</p>
                   </div>
 
                   <div className="stat-card">
                     <h3>Available Credit</h3>
-                    <p className="amount">€5,000.00</p>
+                    <p className="amount">£5,000.00</p>
                   </div>
 
                   <div className="stat-card">

@@ -18,7 +18,7 @@ export default function TravelInsuranceModal({ onClose }: Props) {
           <div className="plan-card">
             <h4>Basic Travel Cover</h4>
             <p className="coverage">
-              Coverage: <strong>€130,000</strong>
+              Coverage: <strong>£130,000</strong>
             </p>
 
             <ul>
@@ -29,7 +29,7 @@ export default function TravelInsuranceModal({ onClose }: Props) {
             </ul>
 
             <div className="pricing">
-              <p>Per Trip: <strong>€1000</strong></p>
+              <p>Per Trip: <strong>£1000</strong></p>
             </div>
 
             <button className="select-btn locked" disabled>
@@ -41,7 +41,7 @@ export default function TravelInsuranceModal({ onClose }: Props) {
           <div className="plan-card premium">
             <h4>Premium Travel Cover</h4>
             <p className="coverage">
-              Coverage: <strong>€210,000</strong>
+              Coverage: <strong>£210,000</strong>
             </p>
 
             <ul>
@@ -52,7 +52,7 @@ export default function TravelInsuranceModal({ onClose }: Props) {
             </ul>
 
             <div className="pricing">
-              <p>Per Trip: <strong>€1260</strong></p>
+              <p>Per Trip: <strong>£1260</strong></p>
             </div>
 
             <button className="select-btn locked" disabled>

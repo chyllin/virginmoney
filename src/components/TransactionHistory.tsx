@@ -173,7 +173,7 @@ export default function TransactionHistory() {
                 tx.amount > 0 ? "credit" : "debit"
               }`}
             >
-              {tx.amount > 0 ? "+" : "-"}€
+              {tx.amount > 0 ? "+" : "-"}£
               {Math.abs(tx.amount).toLocaleString()}
             </span>
           </li>

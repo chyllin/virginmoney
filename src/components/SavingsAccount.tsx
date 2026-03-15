@@ -29,7 +29,7 @@ export default function SavingsAccount({ accountFrozen }: Props) {
         <div className="overview-grid">
           <div>
             <span className="label">Current Balance</span>
-            <p className="value">€125,450.00</p>
+            <p className="value">£125,450.00</p>
           </div>
 
           <div>
@@ -39,12 +39,12 @@ export default function SavingsAccount({ accountFrozen }: Props) {
 
           <div>
             <span className="label">Interest Earned (This Month)</span>
-            <p className="value">€438.20</p>
+            <p className="value">£438.20</p>
           </div>
 
           <div>
             <span className="label">Total Interest Earned</span>
-            <p className="value">€3,214.00</p>
+            <p className="value">£3,214.00</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function SavingsAccount({ accountFrozen }: Props) {
               <div className="goal-header">
                 <span>{goal.name}</span>
                 <span>
-                  €{goal.saved.toLocaleString()} / €
+                  £{goal.saved.toLocaleString()} / £
                   {goal.target.toLocaleString()}
                 </span>
               </div>
@@ -96,17 +96,17 @@ export default function SavingsAccount({ accountFrozen }: Props) {
         <div className="growth-grid">
           <div>
             <span className="label">Monthly</span>
-            <p className="value">€438.20</p>
+            <p className="value">£438.20</p>
           </div>
 
           <div>
             <span className="label">Year-to-Date</span>
-            <p className="value">€3,214.00</p>
+            <p className="value">£3,214.00</p>
           </div>
 
           <div>
             <span className="label">Projected (12 Months)</span>
-            <p className="value">€142,800.00</p>
+            <p className="value">£142,800.00</p>
           </div>
         </div>
       </div>

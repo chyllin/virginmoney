@@ -22,7 +22,7 @@ export default function LoansMortgage({ accountFrozen }: Props) {
 
           <div>
             <span className="label">Outstanding Balance</span>
-            <p className="value">€55,000.00</p>
+            <p className="value">£55,000.00</p>
           </div>
 
           <div>
@@ -37,7 +37,7 @@ export default function LoansMortgage({ accountFrozen }: Props) {
 
           <div>
             <span className="label">Payment</span>
-            <p className="value">€1,250.00</p>
+            <p className="value">£1,250.00</p>
           </div>
 
           <div>
@@ -97,17 +97,17 @@ export default function LoansMortgage({ accountFrozen }: Props) {
 
           <div>
             <span className="label">Original Amount</span>
-            <p>€120,000</p>
+            <p>£120,000</p>
           </div>
 
           <div>
             <span className="label">Remaining Balance</span>
-            <p>€55,000</p>
+            <p>£55,000</p>
           </div>
 
           <div>
             <span className="label">Payment</span>
-            <p>€1,250</p>
+            <p>£1,250</p>
           </div>
 
           <div>
